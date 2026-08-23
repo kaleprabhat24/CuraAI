@@ -2,7 +2,7 @@
 import { useState, useMemo, useRef, useEffect } from "react";
 import "./App.css";
 
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://cureai-backend-v4f8.onrender.com";
 
 function App() {
   const [files, setFiles] = useState([]);
