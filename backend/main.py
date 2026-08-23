@@ -1,3 +1,4 @@
+import os
 from fastapi import FastAPI, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.openapi.utils import get_openapi
@@ -32,7 +33,11 @@ app.add_middleware(
 # LOAD MODEL
 # ============================================================
 
-MODEL_PATH = "../model/cureai_chest_xray_model.keras"
+MODEL_PATH = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+    "model",
+    "cureai_chest_xray_model.keras"
+)
 
 model = tf.keras.models.load_model(MODEL_PATH)
 
