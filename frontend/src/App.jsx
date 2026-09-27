@@ -1274,7 +1274,7 @@ import "./App.css";
 //                     pneumonia_probability, confidence,
 //                     priority, priority_score }], error? }
 // ============================================================
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://cureai-backend-v4f8.onrender.com";
 
 const NAV_ITEMS = [
   { key: "dashboard", label: "Dashboard" },
